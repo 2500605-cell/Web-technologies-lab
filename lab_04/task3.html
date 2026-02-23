@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop Customization</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 50px;
+        }
+
+        h2 {
+            color: #2c3e50;
+        }
+
+        #output {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+            color: #333;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Loop Customization</h2>
+    <p id="output"></p>
+<script>
+    let result=" ";
+    for(let i=0;i<=20;i++){
+         result += i + " ";
+    }
+    result += "<br><br>Even Numbers:<br>";
+    for (let i = 1; i <= 20; i++) {
+    if (i % 2 == 0) {
+        result += i + " ";
+    }
+}
+
+result += "<br><br>Reverse (10-1):<br>";
+for (let i = 10; i >= 1; i--) {
+    result += i + " ";
+}
+
+document.getElementById("output").innerHTML = result;
+
+</script>
+   
+</body>
+</html>
