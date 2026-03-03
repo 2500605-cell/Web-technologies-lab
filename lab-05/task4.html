@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Students Data</title>
+<style>
+body{font-family:Arial;text-align:center;margin-top:40px;background:#eef2ff}
+.container{background:white;padding:20px;width:450px;margin:auto;border-radius:10px}
+.student{margin:10px 0;padding:10px;background:#f0f0f0;border-radius:5px}
+.topper{color:blue;font-weight:bold}
+body{
+font-family:Arial;
+background:linear-gradient(135deg,#c3cfe2,#c3e0e5);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.container{
+background:white;
+padding:30px;
+width:500px;
+border-radius:20px;
+box-shadow:0 15px 30px rgba(0,0,0,0.15);
+text-align:center;
+}
+
+h2{
+color:#3f51b5;
+margin-bottom:20px;
+}
+
+.student{
+background:#f5f5f5;
+padding:12px;
+margin:10px 0;
+border-radius:10px;
+transition:0.3s;
+}
+
+.student:hover{
+background:#e3f2fd;
+transform:scale(1.03);
+}
+
+#average{
+margin-top:15px;
+color:#4caf50;
+font-weight:bold;
+}
+
+#topper{
+color:#ff5722;
+font-weight:bold;
+font-size:20px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h2>Students Record</h2>
+<div id="students"></div>
+<h3 id="average"></h3>
+<h3 id="topper"></h3>
+</div>
+
+<script>
+let students=[
+{name:"Ali",marks:85},
+{name:"Sara",marks:92},
+{name:"Ahmed",marks:78}
+];
+
+let total=0;
+let highest=students[0];
+
+let display="";
+
+for(let i=0;i<students.length;i++){
+display+="<div class='student'>Name: "+students[i].name+
+"<br>Marks: "+students[i].marks+"</div>";
+
+total+=students[i].marks;
+
+if(students[i].marks>highest.marks){
+highest=students[i];
+}
+}
+
+let average=total/students.length;
+
+document.getElementById("students").innerHTML=display;
+document.getElementById("average").innerHTML="Average Marks: "+average;
+document.getElementById("topper").innerHTML="Topper: "+highest.name+" ("+highest.marks+")";
+</script>
+
+</body>
+</html>

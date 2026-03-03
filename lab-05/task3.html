@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Array Operations</title>
+<style>
+body{font-family:Arial;text-align:center;margin-top:40px;background:#f4f4f4}
+.container{background:white;padding:20px;width:400px;margin:auto;border-radius:10px}
+h3{color:#333}
+body{
+font-family:Arial;
+background:#e0f7fa;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.container{
+background:white;
+padding:30px;
+width:450px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+text-align:center;
+}
+
+h2{
+color:#00796b;
+margin-bottom:20px;
+}
+
+p{
+font-size:18px;
+line-height:1.6;
+color:#333;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h2>Array Operations</h2>
+<p id="result"></p>
+</div>
+
+<script>
+let numbers=[10,25,5,40,15,30];
+
+let sum=0;
+for(let i=0;i<numbers.length;i++){
+sum+=numbers[i];
+}
+
+let largest=numbers[0];
+for(let i=0;i<numbers.length;i++){
+if(numbers[i]>largest){
+largest=numbers[i];
+}
+}
+
+let reversed=[...numbers].reverse();
+
+document.getElementById("result").innerHTML=
+"Array: "+numbers.join(", ")+"<br><br>"+
+"Sum: "+sum+"<br><br>"+
+"Largest: "+largest+"<br><br>"+
+"Reversed: "+reversed.join(", ");
+</script>
+
+</body>
+</html>

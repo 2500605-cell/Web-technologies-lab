@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Number Checker</title>
+<style>
+body{text-align:center;font-family:Arial;margin-top:40px}
+input,button{padding:8px;margin:5px}
+#output{font-size:20px;font-weight:bold}
+body{
+font-family:Arial;
+background:linear-gradient(120deg,#f6d365,#fda085);
+text-align:center;
+padding-top:80px;
+}
+
+h2{
+color:#fff;
+}
+
+input{
+padding:10px;
+width:200px;
+border:none;
+border-radius:20px;
+margin:10px;
+}
+
+button{
+padding:10px 20px;
+border:none;
+border-radius:20px;
+background:#fff;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:black;
+color:white;
+}
+
+#output{
+margin-top:20px;
+font-size:22px;
+font-weight:bold;
+}
+</style>
+</head>
+<body>
+
+<h2>Number Checker</h2>
+
+<input type="number" id="number" placeholder="Enter a number">
+<button onclick="checkNumber()">Check</button>
+
+<h3 id="output"></h3>
+
+<script>
+function checkNumber(){
+let num=document.getElementById("number").value;
+let output=document.getElementById("output");
+
+if(num===""){
+alert("Please enter a number");
+return;
+}
+
+num=Number(num);
+
+if(num%2===0)
+output.innerHTML="Even Number";
+else
+output.innerHTML="Odd Number";
+
+if(num>=0)
+output.style.color="green";
+else
+output.style.color="red";
+}
+</script>
+
+</body>
+</html>
