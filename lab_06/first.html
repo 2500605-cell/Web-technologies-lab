@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>Weather App ⛅</h1>
+    <p>Enter a city to get current weather</p>
+
+    <div class="search-box">
+      <input type="text" id="cityInput" placeholder="Enter city name..." />
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <div id="lastSearched" class="last-searched hidden">
+      Last searched: <strong id="lastCity"></strong>
+      <button id="reloadLast">Search again</button>
+    </div>
+
+    <div id="errorBox" class="error-box hidden">
+      ⚠ City not found. Please check the spelling.
+    </div>
+
+    <div id="loadingBox" class="hidden">
+      <p>Loading...</p>
+    </div>
+
+    <div id="weatherCard" class="weather-card hidden">
+      <h2 id="cityName"></h2>
+      <div id="weatherIcon" class="icon"></div>
+      <h1 id="tempValue" class="temp"></h1>
+      <p id="condition" class="condition"></p>
+
+      <hr />
+
+      <div class="details-row">
+        <div class="detail-item">
+          <p>💧 Humidity</p>
+          <strong id="humidity">--</strong>
+        </div>
+        <div class="detail-item">
+          <p>🌬 Wind</p>
+          <strong id="wind">--</strong>
+        </div>
+        <div class="detail-item">
+          <p>👁 Feels Like</p>
+          <strong id="feelsLike">--</strong>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="first.js"></script>
+</body>
+</html>
