@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <style>
+        body{
+            font-family: Arial;
+            background: #fff5ee;
+            padding: 30px;
+        }
+        .box{
+            width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        input{
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body ng-app="">
+    <div class="box">
+        <h2>Simple Calculator</h2>
+        <input type="number" placeholder="First Number" ng-model="num1">
+        <input type="number" placeholder="Second Number" ng-model="num2">
+
+        <p>Addition: {{num1 + num2}}</p>
+        <p>Subtraction: {{num1 - num2}}</p>
+        <p>Multiplication: {{num1 * num2}}</p>
+        <p>Division: {{num1 / num2}}</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 5</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <style>
+        body{
+            font-family: Arial;
+            background: #eef7ff;
+            padding: 30px;
+        }
+        .box{
+            width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        input, button{
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        li{
+            background: #d9ecff;
+            margin-top: 5px;
+            padding: 8px;
+            list-style: none;
+        }
+    </style>
+</head>
+<body ng-app="" ng-init="tasks=[]">
+    <div class="box">
+        <h2>Mini To-Do App</h2>
+        <input type="text" ng-model="newTask" placeholder="Enter task">
+        <button ng-click="tasks.push(newTask)">Add Task</button>
+
+        <ul>
+            <li ng-repeat="t in tasks">{{t}}</li>
+        </ul>
+    </div>
+</body>
+</html>

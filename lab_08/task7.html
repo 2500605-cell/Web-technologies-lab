@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 7</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <style>
+        body{
+            font-family: Arial;
+            background: #fffaf0;
+            padding: 30px;
+        }
+        .box{
+            width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body ng-app="">
+    <div class="box">
+        <h2>Show/Hide Password</h2>
+        <input type="{{show ? 'text' : 'password'}}" ng-model="password">
+        <br><br>
+        <input type="checkbox" ng-model="show"> Show Password
+    </div>
+</body>
+</html>

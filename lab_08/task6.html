@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 6</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <style>
+        body{
+            font-family: Arial;
+            background: #f3fff3;
+            padding: 30px;
+        }
+        .box{
+            width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        input, button{
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body ng-app="">
+    <div class="box">
+        <h2>Login Validation</h2>
+        <input type="text" placeholder="Username" ng-model="user">
+        <input type="password" placeholder="Password" ng-model="pass">
+        <button ng-click="msg=(user=='admin' && pass=='1234') ? 'Login Successful' : 'Invalid Credentials'">
+            Login
+        </button>
+        <p>{{msg}}</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <style>
+        body{
+            font-family: Arial;
+            background: #f9f0ff;
+            padding: 30px;
+        }
+        .box{
+            width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        li{
+            background: #e6ccff;
+            margin: 5px 0;
+            padding: 10px;
+            list-style: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body ng-app="" ng-init="employees=[
+{name:'Ali',dept:'IT'},
+{name:'Sara',dept:'HR'},
+{name:'Ahmed',dept:'Finance'},
+{name:'Zara',dept:'Marketing'},
+{name:'Usman',dept:'Admin'}]">
+    <div class="box">
+        <h2>Employee List</h2>
+        <ul>
+            <li ng-repeat="e in employees">
+                {{e.name}} - {{e.dept}}
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
